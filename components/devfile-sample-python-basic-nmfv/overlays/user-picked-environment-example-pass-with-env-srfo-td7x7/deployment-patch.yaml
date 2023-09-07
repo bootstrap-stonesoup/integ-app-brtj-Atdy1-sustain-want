@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-python-basic-nmfv
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/bootstrap/nbe-e2e-dorb-tenant/integ-app-brtj/devfile-sample-python-basic-nmfv@sha256:e0230bbe095c64f42e9be4e611f0c206c79b533ae50a1a3888b3452486bb3a1c
+        name: my-python
+        resources: {}
+status: {}
